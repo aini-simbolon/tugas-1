@@ -35,7 +35,7 @@ a :hover {
 .parent-nav .nav-menu .nav-menu-child-3 {
     border: 10px;
     flex-grow: 1;
-}
+};
 
 h3 {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
