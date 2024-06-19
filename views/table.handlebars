@@ -1,0 +1,59 @@
+<body style="margin: 0;">
+        <div class="parent-nav">
+            <div class="nav-menu">
+                <div class="nav-logo">
+                    <a href="tugas.html">Aini</a> 
+                 </div>
+                 <div class="nav-menu-child-1">
+                    <a href="tugas.html">Home</a>
+                 </div>
+                 <div class="nav-menu-child-2">
+                    <a href="tugas.html">Contact List</a>
+                 </div>
+                 <div class="nav-menu-child-3">
+                    <a href="tugas.html">Contact Me</a>
+                 </div>
+            </div>
+         </div>
+
+         <h3>Contact List</h3>
+
+         <a href="/" class="button">Add</a> 
+
+         <center><table border="1">
+            <tr>
+                <th>NO</th>
+                <th>NAME</th>
+                <th>EMAIL</th>
+                <th>MESSAGE</th>
+                <th>SEND AT</th>
+                <th>ACTION</th>
+            </tr>
+           {{#each todos}}
+            <tr>
+                <td>{{increment @index}}</td>
+                <td>{{this.name}}</td>
+                <td> {{this.email}}</td>
+                <td> {{this.message}} </td>
+                <td>  {{this.send_at}}</td>
+                <td>
+                  <a href="/update-todo/{{this.id}} " class="update">Edit</a>
+                <button
+                onclick="handleDelete({{this.id}})" class="delete">Delete</button>
+                </td>
+            </tr>
+           {{/each}}
+         </table>
+
+         <script>
+            function handleDelete(id) {
+               const result = confirm("Hapus data ini?")
+
+               if(result == true) {
+                  window.location.href = `/delete-todo/${id}`;
+               }
+            };
+         </script>
+
+
+         

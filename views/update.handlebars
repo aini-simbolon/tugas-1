@@ -1,0 +1,40 @@
+ <h3>Update</h3>
+
+         <form action="/todos/update/{{todo.id}}" method="POST">
+            <div class="parent-form">
+                     <div class="name">
+                    <input 
+                    id="name"
+                    name="name"
+                    type="text"
+                    placeholder="Full Name"
+                    value="{{todo.name}}"> 
+                 </div>
+
+                  <div class="email">
+                     <textarea 
+                     id="email"
+                     name="email"
+                     placeholder="Email">{{todo.email}}</textarea>
+                </div>
+                
+                 <div  class="message">
+                     <textarea
+                     id="message"
+                     name="message"
+                     placeholder="Message">{{todo.message}}</textarea>
+                 </div>
+
+                  <div  class="at">
+                     <textarea
+                     id="sendAt"
+                     name="sendAt"
+                     placeholder="Send At">{{todo.sendAt}}</textarea>
+                 </div>
+
+                 <div class="send">
+                  <button>SEND</button>
+                 </div>
+                 </div>
+            
+         </form>
